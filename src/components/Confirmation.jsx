@@ -34,7 +34,7 @@ const Confirmation = () => {
   const downloadTicket = () => {
     const ticketContent = `
 ===========================================
-           TRIPVAN BOOKING TICKET
+           TripZy BOOKING TICKET
 ===========================================
 
 Booking ID: ${booking.id}
@@ -42,19 +42,19 @@ Trip: ${booking.tripName}
 Customer: ${booking.userName}
 Email: ${booking.userEmail}
 Date: ${formatDate(booking.date)}
-Price: $${booking.price}
+Price: ₹${booking.price}
 Status: ${booking.status.toUpperCase()}
 
 ===========================================
 Please present this ticket on your trip day.
-Contact us: support@tripvan.com
+Contact us: support@TripZy.com
 ===========================================
     `;
 
     const element = document.createElement('a');
     const file = new Blob([ticketContent], { type: 'text/plain' });
     element.href = URL.createObjectURL(file);
-    element.download = `tripvan-ticket-${booking.id}.txt`;
+    element.download = `TripZy-ticket-${booking.id}.txt`;
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -121,7 +121,7 @@ Contact us: support@tripvan.com
               </div>
               <div>
                 <p className="text-sm text-gray-600">Total Paid</p>
-                <p className="font-semibold text-gray-900">${booking.price}</p>
+                <p className="font-semibold text-gray-900">₹{booking.price}</p>
               </div>
             </div>
           </div>
@@ -152,21 +152,8 @@ Contact us: support@tripvan.com
         </Link>
       </div>
 
-      {/* Important Information */}
-      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-        <h3 className="text-lg font-semibold text-yellow-800 mb-3">
-          Important Information
-        </h3>
-        <ul className="space-y-2 text-sm text-yellow-700">
-          <li>• Please arrive 15 minutes before departure time</li>
-          <li>• Bring a valid ID and your booking confirmation</li>
-          <li>• Check weather conditions and dress appropriately</li>
-          <li>• For cancellations, contact us 24 hours in advance</li>
-        </ul>
-      </div>
-
       <div className="text-center mt-8 text-gray-600">
-        <p>Need help? Contact us at: support@tripvan.com | +1 (555) 123-4567</p>
+        <p>Need help? Contact us at: support@TripZy.com | +1 (555) 123-4567</p>
       </div>
     </div>
   );

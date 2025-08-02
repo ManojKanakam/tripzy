@@ -57,7 +57,7 @@ const TripList = () => {
               </p>
               <div className="flex justify-between items-center mb-4">
                 <span className="text-sm text-gray-500">{trip.duration}</span>
-                <span className="text-lg font-bold text-green-600">${trip.price}</span>
+                <span className="text-lg font-bold text-green-600">₹{trip.price}</span>
               </div>
               <Link
                 to={`/book/${trip.id}`}

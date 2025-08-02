@@ -93,7 +93,7 @@ const BookingForm = () => {
             <p className="text-gray-600 mb-4">{trip.description}</p>
             <div className="flex justify-between mb-6">
               <span>Duration: {trip.duration}</span>
-              <span className="font-bold text-green-600">Price: ${trip.price}</span>
+              <span className="font-bold text-green-600">Price: ₹{trip.price}</span>
             </div>
 
             {/* Availability Check */}
@@ -207,7 +207,7 @@ const BookingForm = () => {
             <div className="border-t pt-4">
               <div className="flex justify-between text-lg font-bold">
                 <span>Total Amount:</span>
-                <span className="text-green-600">${trip.price}</span>
+                <span className="text-green-600">₹{trip.price}</span>
               </div>
             </div>
 
@@ -216,7 +216,7 @@ const BookingForm = () => {
               disabled={!availability?.available || loading}
               className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 disabled:bg-gray-400 font-semibold text-lg"
             >
-              {loading ? 'Processing...' : `Pay $${trip.price} & Book Trip`}
+              {loading ? 'Processing...' : `Pay ₹${trip.price} & Book Trip`}
             </button>
           </form>
         </div>

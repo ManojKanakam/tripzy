@@ -100,7 +100,7 @@ const AdminPanel = () => {
             <div className="text-3xl mr-4">💰</div>
             <div>
               <p className="text-sm text-gray-600">Total Revenue</p>
-              <p className="text-2xl font-bold">${stats.totalRevenue}</p>
+              <p className="text-2xl font-bold">₹{stats.totalRevenue}</p>
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@ const AdminPanel = () => {
                       {formatDate(booking.date)}
                     </td>
                     <td className="px-6 py-4 text-sm font-semibold text-green-600">
-                      ${booking.price}
+                    ₹{booking.price}
                     </td>
                     <td className="px-6 py-4">
                       <select
